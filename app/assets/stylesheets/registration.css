@@ -1,0 +1,63 @@
+/* General styles for the registration form */
+.registration-form {
+    width: 300px;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+}
+
+/* Styles for each field */
+.registration-form .field {
+    margin-bottom: 20px;
+}
+
+/* Style for labels in the form */
+.registration-form label {
+    font-size: 16px;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Style for input fields (text, password) */
+.registration-form input[type="email"],
+.registration-form input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Includes padding and border in the width */
+}
+
+/* Styles for the actions section at the bottom of the form */
+.registration-form .actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Style for the 'Go Back' link to make it look like a button */
+.registration-form .actions a {
+    padding: 10px 15px;
+    background-color: #f8f8f8;
+    color: #333;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+/* Style for the submit button */
+.registration-form .actions input[type="submit"] {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Hover effects for link and button */
+.registration-form .actions a:hover,
+.registration-form .actions input[type="submit"]:hover {
+    background-color: #45a049;
+}

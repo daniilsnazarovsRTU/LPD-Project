@@ -1,0 +1,24 @@
+<%= form_tag(search_bills_path, method: :get, class: 'search-form') do %>
+  <div class="search-form-group">
+    <%= label_tag :notes, 'Meklēt atslēgvārdu:' %>
+    <%= text_field_tag :notes, params[:notes], class: 'form-control' %>
+  </div>
+
+  <div class="search-form-group">
+    <%= label_tag :created_at, 'Meklēt datumā:' %>
+    <%= date_field_tag :created_at, params[:created_at], class: 'form-control' %>
+  </div>
+
+  <div class="actions">
+    <%= link_to 'Go back', root_url, class: 'btn-back' %>
+    <%= submit_tag 'Meklēt', class: 'search-submit-button' %>
+  </div>
+<% end %>
+
+<% if @bills.present? %>
+  <div class="bills-grid">
+    <% @bills.each do |bill| %>
+      <%= render bill%>
+    <% end %>
+  </div>
+<% end %>

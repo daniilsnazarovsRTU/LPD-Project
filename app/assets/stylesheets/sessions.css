@@ -1,0 +1,60 @@
+.login-form {
+    width: 300px; /* Adjust based on your specific needs */
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+.login-title {
+    text-align: center;
+}
+
+.login-field {
+    margin-bottom: 20px;
+}
+
+.login-field input[type="email"],
+.login-field input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.login-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.login-button {
+    background-color: #CCFF90; /* Light green */
+    border: none;
+    padding: 10px 15px;
+    width: 48%;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.green-button {
+    background-color: #AACC66; /* Darker green */
+}
+
+
+.registration-link {
+    display: inline-block;
+    background-color: #CCFF90; /* Light green, same as login button */
+    border: none;
+    padding: 10px 15px;
+    color: #333; /* Dark text color for contrast */
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px; /* Match the font size of the login button */
+    border-radius: 4px; /* Rounded corners like the button */
+    cursor: pointer;
+    margin-right: 4%; /* Space before the login button */
+}
+
+/* Hover effect to mimic button hover effects */
+.registration-link:hover {
+    background-color: #AACC66; /* Darker green on hover */
+}

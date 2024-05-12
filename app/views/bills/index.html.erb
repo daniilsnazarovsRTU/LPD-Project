@@ -1,14 +1,4 @@
-<p style="color: green"><%= notice %></p>
-
-<h1>Bills</h1>
-
-<div id="bills">
-  <% @bills.each do |bill| %>
-    <%= render bill %>
-    <p>
-      <%= link_to "Show this bill", bill %>
-    </p>
-  <% end %>
+<div class="bill-index-container">
+  <%= link_to 'Meklēt Eksistējošo Rēķinu', search_bills_path, class: 'btn-bill-index' %>
+  <%= link_to 'Pievienot Jaunu Rēķinu', new_bill_path, class: 'btn-bill-index' %>
 </div>
-
-<%= link_to "New bill", new_bill_path %>

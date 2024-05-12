@@ -1,31 +1,26 @@
 class BillsController < ApplicationController
   before_action :set_bill, only: %i[ show edit update destroy ]
-
-  # GET /bills or /bills.json
+  before_action :authenticate_user!
   def index
-    @bills = Bill.all
   end
 
-  # GET /bills/1 or /bills/1.json
-  def show
-  end
-
-  # GET /bills/new
   def new
     @bill = Bill.new
   end
 
-  # GET /bills/1/edit
-  def edit
+  def search
+    @bills = Bill.where(user: current_user)
+    @bills = @bills.where("notes LIKE ?", "%#{params[:notes]}%") if params[:notes].present?
+    @bills = @bills.where("DATE(created_at) = ?", params[:created_at]) if params[:created_at].present?
   end
 
-  # POST /bills or /bills.json
   def create
     @bill = Bill.new(bill_params)
+    @bill.user = current_user
 
     respond_to do |format|
       if @bill.save
-        format.html { redirect_to bill_url(@bill), notice: "Bill was successfully created." }
+        format.html { redirect_to bills_url, notice: "Bill was successfully created." }
         format.json { render :show, status: :created, location: @bill }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -34,7 +29,6 @@ class BillsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /bills/1 or /bills/1.json
   def update
     respond_to do |format|
       if @bill.update(bill_params)
@@ -47,7 +41,6 @@ class BillsController < ApplicationController
     end
   end
 
-  # DELETE /bills/1 or /bills/1.json
   def destroy
     @bill.destroy!
 
@@ -58,13 +51,11 @@ class BillsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_bill
       @bill = Bill.find(params[:id])
     end
 
-    # Only allow a list of trusted parameters through.
     def bill_params
-      params.require(:bill).permit(:filename)
+      params.require(:bill).permit(:filename, :notes, :image)
     end
 end

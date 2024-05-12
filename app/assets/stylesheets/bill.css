@@ -1,0 +1,163 @@
+/* new bill form styling */
+
+.new-bill-form {
+    width: 400px; /* Adjust width as necessary */
+    margin: 40px auto;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Subtle shadow for emphasis */
+    padding: 20px;
+    border-radius: 5px; /* Rounded corners for the form */
+    background: white; /* Ensure background is white */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;  /* Aligns items vertically in the center */
+    justify-content: space-between; /* Spaces label and field */
+    margin-bottom: 20px; /* Space between form fields */
+}
+
+.form-group label {
+    margin-right: 10px; /* Space between label and input field */
+
+    white-space: nowrap; /* Ensures the label is on one line */
+    flex-shrink: 0; /* Prevents label from shrinking */
+    width: auto; /* Adjust based on content width */
+}
+
+.form-control, .form-control-file {
+    width: calc(100% - 120px); /* Adjust width accounting for label */
+    padding: 8px;
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 4px; /* Rounded borders for the input fields */
+}
+
+.actions {
+    display: flex; /* Aligns children (buttons) inline */
+    justify-content: space-between; /* Distributes space between elements */
+}
+
+.submit-button {
+    background-color: #4CAF50; /* Light green background */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    width: 100%; /* Full-width button */
+    border-radius: 4px; /* Rounded borders for the button */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.submit-button:hover {
+    background-color: #45a049; /* Slightly darker green on hover */
+}
+
+/* Index page buttons styling */
+
+.bill-index-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Use full height of the viewport to center vertically */
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Ensures the container uses the full height of the viewport */
+    margin-top: -50px; /* Optional: adjusts the vertical positioning if needed */
+}
+
+.btn-bill-index {
+    background-color: #FFD700; /* Gold color similar to the image */
+    color: #000; /* Black text */
+    text-decoration: none; /* Removes underline from links */
+    padding: 15px 30px; /* Padding to increase the size of the buttons */
+    margin: 10px; /* Space between buttons */
+    font-size: 16px; /* Sets the font size */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for 3D effect */
+    display: inline-block; /* Ensures that padding and margin are respected */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.btn-bill-index:hover, .btn-bill-index:focus {
+    background-color: #E6C300; /* Slightly darker shade on hover for depth */
+    transform: translateY(-2px); /* Raises the button slightly on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Deeper shadow for lifted effect */
+}
+
+/* search form styling */
+
+.search-form {
+    width: 300px;
+    margin: 40px auto;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    border-radius: 5px;
+    background: white;
+}
+
+.search-form-group {
+    margin-bottom: 20px;
+}
+
+.search-form-control {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-submit-button {
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-submit-button:hover {
+    background-color: #45a049;
+}
+
+.btn-back {
+    background-color: #f44336; /* Different color for distinction */
+}
+
+.search-submit-button {
+    background-color: #4CAF50;
+}
+
+.btn-back:hover, .search-submit-button:hover {
+    opacity: 0.8; /* Slight transparency on hover */
+}
+
+.btn-back, .search-submit-button {
+    padding: 10px 15px; /* Uniform padding for buttons */
+    text-decoration: none; /* Removes underline from link */
+    color: white; /* White text for visibility */
+    background-color: #4CAF50; /* Similar styling as the search button */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px; /* Margins to ensure buttons do not touch */
+}
+
+.bills-grid {
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+    grid-template-columns: repeat(2, 1fr); /* Creates 2 columns */
+    grid-gap: 20px; /* Space between the grid items */
+    margin: 20px 0; /* Vertical spacing for the grid container */
+}
